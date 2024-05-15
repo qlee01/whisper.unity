@@ -28,7 +28,7 @@ jobs:
         run: |
           sdkmanager --install "build-tools;33.0.2"
           sdkmanager --install "cmake;3.22.1"
-          sdkmanager --install "ndk;26.3.11579264"
+          sdkmanager --install "ndk;25.2.9519653"
           
       - name: Clone whisper.unity
         uses: actions/checkout@v3
