@@ -75,10 +75,10 @@ build_android() {
   clean_build
   echo "Starting building for Android..."
 
-  cmake -DCMAKE_TOOLCHAIN_FILE="$android_sdk_path" -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI=arm64-v8a -DBUILD_SHARED_LIBS=OFF \
+  cmake -DCMAKE_TOOLCHAIN_FILE="$android_sdk_path" -DCMAKE_BUILD_TYPE=Release -DBUILD_TARGET="android" -DANDROID_ABI=armeabi-v7a -DANDROID_PLATFORM=android-34 -DBUILD_SHARED_LIBS=OFF \
   -DWHISPER_BUILD_TESTS=OFF -DWHISPER_BUILD_EXAMPLES=OFF ../
   make
-
+#-DANDROID_ABI=arm64-v8a
   echo "Build for Android complete!"
 
   artifact_path="$build_path/libwhisper.a"
